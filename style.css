@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: #e3e92ef8;
+}
+
+nav h1 {
+  margin: 8px auto 8px 5px;
+  color: #ff0000;
+  text-transform: uppercase;
+}
+
+nav h1 i {
+  margin: 5px;
+  color: #000;
+}
+
+input[type = submit] {
+  width: 80px;
+  padding: 10px 5px;
+  font-size: 1rem;
+  background: #00fffb7f;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+
+}
+
+input[type = submit]:hover {
+  background: #00ccff;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.note{
+  width: 160px;
+  height: 150px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background: #1bac3a3d;
+  position: relative;
+  margin: 4px;
+}
+
+.over{
+  width: 100%;
+  height: 81.9%;
+/*  border: 2px solid red;*/
+  overflow: auto;
+}
+.box{
+  background: transparent;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  color: #000;
+  white-space: wrap;
+  font-size: 1rem;
+  text-align: center;
+  padding-top: 3px;
+}
+
+.operation{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.btn{
+  width: 27px;
+  height: 25px;
+  margin: 1px;
+  border-radius: 15px;
+  border: none;
+  text-align: center;
+  outline: none;
+  transition: .5s;
+}
+
+button:nth-child(1){
+  background: #0def2c;
+}
+
+button:nth-child(1):hover{
+  background: #fff;
+}
+
+.fa-edit:hover{
+  color: #0def2c;
+}
+
+
+button:last-child{
+  background: #ff1414;
+}
+
+button:last-child:hover{
+  background: #fff;
+}
+
+.fa-trash-alt:hover{
+  color: #ff1414;
+}
+
+
+.fas{
+  color: #fff;
+}
+a {
+  text-transform: uppercase;
+  padding: 8px 5px;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-right: 5px;
+  position: relative;
+  overflow: hidden;
+  transition: all .3s;
+  z-index: 1;
+}
+
+a::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: #000;
+  transform: translateX(-100%);
+  transition: all .3s;
+  z-index: -5;
+}
+
+a:hover::before,a:hover {
+  transform: translateX(0%);
+  color: #fff;
+}
+
+.main{
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  font-size: 1rem;
+}
+
+.hide{
+  display: none;
+}
+@media screen and (min-width:800px) {
+  .box {
+    width: 280px;
+    height: 270px;
+    margin: 15px;
+  }
+
+  .box::placeholder {
+    line-height: 270px;
+    font-size: 1.5rem;
+  }
+
+  nav h1 {
+    margin: 15px auto 15px 5px;
+    font-size: 2.5rem;
+  }
+
+  nav h1 i {
+    margin: 12px;
+  }
+
+  a {
+    padding: 25px 30px;
+  }
+
+  .box {
+    font-size: 2rem;
+  }
+}
